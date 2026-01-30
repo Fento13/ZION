@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios 4</title>
+</head>
+<body>
+    <!--
+Solicita al usuario que ingrese los gastos estimados para cada categoría.
+Calcula el coste total sumando todos los gastos.
+Muestra el coste total al usuario.
+Ejemplo de entrada: Gastos de alojamiento: 200€, Gastos de alimentación: 150€, Gastos de entretenimiento: 100€.
+Salida esperada: El coste total del viaje es 450€.-->
+<form id="formularioGastos">
+    <h2>Calculadora de Gastos de Viaje</h2>
+    
+    <label for="inputGastos">Ingresa los gastos (formato: 200,150,100):</label>
+    <input type="text" id="inputGastos" name="gastos" placeholder="ej: 200,150,100" required>
+    
+    <button type="submit">Calcular</button>
+    
+    <p>COSTE TOTAL: <span id="costoTotal">0€</span></p>
+</form>
+
+<script src="Ejercicio4.js"></script>
+</body>
+</html>

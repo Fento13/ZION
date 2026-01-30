@@ -7,24 +7,25 @@ let botonTema = document.getElementById("botonTema");
 let temaClaro = true;
 
 function actualizar(){
-    if (parrafo1.value.length > 0) {
-        parrafo1.innerText = input1.value.toUpperCase;
+    if (input1.value) {
+        parrafo1.innerHTML = input1.value.toUpperCase();
+        alert(parrafo1.innerHTML);
         pError.innerText = "";
     } else {
-        pError.innerText = "ERROR:cadena vacia detectada";
+        pError.innerHTML = "ERROR:cadena vacia detectada";
     }
 }
 
 function inputNuevo(){
-    if (parrafo2.value.lengtth > 0) {
-        let resultado = "";
-    for (let index = 0; index < parrafo2.value.length; index++) {
-        let letra = parrafo2.value[index];
-        
+    parrafo2.innerHTML = "";
+
+    if (parrafo2.value) {
+    for (let index = 0; index < input2.value.length; index++) {
         if ((index % 2) === 0) {
-            resultado += letra.toUpperCase;
+        let letra = input2.value.toUpperCase;
+        parrafo2.innerHTML += letra.charAt(i);
         } else {
-            resultado += letra;
+        parrafo2.innerHTML += letra.toLowerCase().charAt(i);
         }
     }
     }
@@ -32,16 +33,13 @@ function inputNuevo(){
 }
 
 function cambiarTema() {
-    let temaOscuro = false;
     if (temaClaro) {
         botonTema.style.color = "black";
-        document.style.backgroundColor = "white";
-        temaOscuro = true;
+        body.style.backgroundColor = "white";
         temaClaro = false;
-    } else (temaOscuro){
+    } else {
         botonTema.style.color = "white";
-        document.style.backgroundColor = "black";
-        temaOscuro = false;
+        body.style.backgroundColor = "black";
         temaClaro = true;
     }
 }

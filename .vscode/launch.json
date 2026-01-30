@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Servidor",
+            "request": "launch",
+            "mainClass": "Servidor",
+            "projectName": "Midgar-main_177cf070"
+        },
+        {
+            "type": "java",
             "name": "Ejercicio2_1",
             "request": "launch",
             "mainClass": "Ejercicio2_1",
