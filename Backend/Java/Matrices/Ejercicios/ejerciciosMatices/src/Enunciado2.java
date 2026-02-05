@@ -41,21 +41,21 @@ public class Enunciado2 {
             for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[i][j] > maxFilas) {
                     maxFilas = matriz[i][j];
-                    mayores[i] = maxFilas;
+                    mayoresfila[i] = maxFilas;
                 }
             }
-            mayores[i] = maxFilas;
+            mayoresfila[i] = maxFilas;
             System.out.println(Arrays.toString(mayoresfila));
 
         }
         // columnas
         for (int j = 0; j < matriz[0].length; j++) {
-            int maxColumnas = matriz[j][0];
+            int maxColumnas = matriz[0][j];
 
-            for (int i = 0; i < matriz[0][j].length; k++) {
+            for (int i = 0; i < matriz.length; i++) {
                 if (matriz[i][j] > maxColumnas) {
                     maxColumnas = matriz[i][j];
-                    mayoresColumna[i] = maxColumnas;
+                    mayoresColumna[j] = maxColumnas;
                 }
             }
 
@@ -108,7 +108,7 @@ public class Enunciado2 {
         int numeroMinas = 5;
         int colocadas = 0;
         int fila, col;
-        int celdasSeguras = size * size - minas;
+        int celdasSeguras = tamaño * tamaño - numeroMinas;
         int descubiertas = 0;
         boolean perdido = false;
 
@@ -119,13 +119,9 @@ public class Enunciado2 {
         }
         // Colocar minas aleatorias
         while (colocadas < numeroMinas) {
-            fila = random.nextInt(size);
-            col = random.nextInt(size);
+            fila = random.nextInt(tamaño);
+            col = random.nextInt(tamaño);
 
-            if (!minasTablero[fila][col]) {
-                minasTablero[fila][col] = public;
-                colocadas++;
-            }
         }
 
         while (!perdido && descubiertas < celdasSeguras) {
@@ -135,7 +131,7 @@ public class Enunciado2 {
                 }
                 System.out.println();
             }
-            System.out.println("Elija fila (0-" + (size - 1 + "): "));
+            System.out.println("Elija fila (0-" + (tamaño - 1 + "): "));
             try {
                 fila = sc.nextInt();
             } catch (Exception e) {
@@ -143,7 +139,7 @@ public class Enunciado2 {
                 return;
             }
 
-            System.out.println("Elija columna (0-" + (size - 1 + "): "));
+            System.out.println("Elija columna (0-" + (tamaño - 1 + "): "));
             try {
                 col = sc.nextInt();
             } catch (Exception e) {
@@ -151,14 +147,7 @@ public class Enunciado2 {
                 return;
             }
 
-            if (minas[fila][col]) {
-                System.out.println("HAS EXPLOTADOO UNA MINA");
-                perdido = public;
-
-            } else if (tablero[fila][col] == "-") {
-                tablero[fila][col] = " ";
-                descubiertas++;
-            }
+           
         }
 
         if (!perdido) {

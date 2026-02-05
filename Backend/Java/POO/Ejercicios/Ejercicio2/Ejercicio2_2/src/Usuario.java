@@ -4,12 +4,12 @@ import java.util.regex.Pattern;
 public class Usuario {
     private String nickname;
     private String contraseña;
-    private Persona personaAsociada;
+    private Persona2 personaAsociada;
     private ArrayList<String> telefonosContacto;
     private ArrayList<String> emails;
 
     // Constructor
-    public Usuario(String nickname, String contraseña, Persona personaAsociada) {
+    public Usuario(String nickname, String contraseña, Persona2 personaAsociada) {
         this.nickname = nickname;
         this.contraseña = contraseña;
         this.personaAsociada = personaAsociada;
@@ -26,7 +26,7 @@ public class Usuario {
         return contraseña;
     }
 
-    public Persona getPersonaAsociada() {
+    public Persona2 getPersonaAsociada() {
         return personaAsociada;
     }
 

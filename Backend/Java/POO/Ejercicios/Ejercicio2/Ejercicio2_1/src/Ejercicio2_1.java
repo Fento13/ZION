@@ -2,10 +2,12 @@ import java.time.LocalDate;
 
 public class Ejercicio2_1 {
     public static void main(String[] args) {
-        Persona persona1 = new Persona("Juan", "Pérez", "Gómez", "12345678A", LocalDate.of(1990, 5, 15));
-        Persona persona2 = new Persona("María", "López", "Martínez", "87654321B", LocalDate.of(1985, 8, 22));
-        Persona persona3 = new Persona("Carlos", "Sánchez", "Ruiz", "11223344C", LocalDate.of(1992, 3, 10));
-        
+        LocalDate fechaNacimiento1 = LocalDate.of(2003,7, 2);
+        LocalDate fechaNacimiento2 = LocalDate.of(1995,9, 3);
+        LocalDate fechaNacimiento3 = LocalDate.of(2000,2, 4);
+        Persona persona1 = new Persona("Juan", "Perez", "Gomez", "123456B", fechaNacimiento1);
+        Persona persona2 = new Persona("Paco", "Garcia", "Rodriguez", "789123N", fechaNacimiento2);
+        Persona persona3 = new Persona("Maria", "De la sierra", "Lorca", "4567789W", fechaNacimiento3);       
         Cuenta cuenta1 = new Cuenta("ES12345678901234567890", 1000.0, new Persona[]{persona1, persona2});
         Cuenta cuenta2 = new Cuenta("ES09876543210987654321", 500.0, new Persona[]{persona3});  
         Cuenta cuenta3 = new Cuenta("ES11223344556677889900", 200.0, new Persona[]{persona1});  
@@ -19,7 +21,7 @@ public class Ejercicio2_1 {
                 System.out.println(persona);
             }
             
-    cuenta1.ingresarDinero(500);                                                                                                                                                                                                                                                                                                                                                                                                        
+    cuenta1.ingresarDinero(500);                                                                                                                                                                                                                                                                                                                                                                                                      
     cuenta2.retirarDinero(10);
     cuenta1.transferirDinero(cuenta3, 100);
     }
