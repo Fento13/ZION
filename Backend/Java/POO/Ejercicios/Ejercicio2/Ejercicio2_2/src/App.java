@@ -105,8 +105,9 @@ public class App {
         }
         
         // Crear persona y usuario
-        Persona persona = new Persona(nombre, apellido1, apellido2, fechaNacimiento);
-        Usuario usuario = new Usuario(nickname, contraseña, persona);
+
+        Persona2 persona2 = new Persona2(nombre, apellido1, apellido2, fechaNacimiento);
+        Usuario usuario = new Usuario(nickname, contraseña, persona2);
         
         // Agregar teléfonos
         System.out.println("Agregue números de teléfono (escriba 'fin' para terminar):");
