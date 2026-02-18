@@ -1,8 +1,6 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
-    cout << "Hola mundo!" << endl;
-    system("pause");
+    char nombre[] = "Javier";
+    printf("Hola %s", nombre);
     return 0;
 }
