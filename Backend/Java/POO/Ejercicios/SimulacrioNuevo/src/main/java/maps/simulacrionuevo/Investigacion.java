@@ -11,15 +11,18 @@ public class Investigacion {
  private LocalDate fechaInicio, fechaFinalEstimada, fechaFinalReal;
  private double presupuesto; 
 
- public Investigacion(String f1P1, String analisis_teorico_sobre_la_estructura_de_n, LocalDate of, LocalDate of1, LocalDate of2, double par){
- }
+    public double getPresupuesto() {
+        return presupuesto;
+    }
+
  
- public Investigacion(String id, String titulo, LocalDate fechaInicio, LocalDate fechaFinalEstimada, LocalDate fechaFinalReal){
+ public Investigacion(String id, String titulo, LocalDate fechaInicio, LocalDate fechaFinalEstimada, LocalDate fechaFinalReal, double presupuesto){
      this.id = id;
      this.titulo = titulo;
      this.fechaInicio = fechaInicio;
      this.fechaFinalEstimada = fechaFinalEstimada;
      this.fechaFinalReal = fechaFinalReal;
+     this.presupuesto = presupuesto;
  }
  
  public String getId(){

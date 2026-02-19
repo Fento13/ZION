@@ -75,8 +75,7 @@ public class SimulacrioNuevo {
         for (Investigacion investigacion : equipo.getInvestigaciones()) {
             System.out.println(investigacion);
         }
-    }   
-
+    }     
     public static void contarIngenieros(ArrayList<Equipo> equipos){
         //TODO contar ingenieros
         int contadorIngenieros = 0;
