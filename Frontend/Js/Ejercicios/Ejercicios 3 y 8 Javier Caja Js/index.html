@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicios 3 y 8</title>
+</head>
+
+<body>
+    <h1>Ejercicio 3</h1>
+    <ul id="lista">
+        <li>Manzana <button class="boton">Eliminar</button></li>
+        <li>Plátano <button class="boton">Eliminar</button></li>
+        <li>Melon <button class="boton">Eliminar</button></li>
+        <li>Pera <button class="boton">Eliminar</button></li>
+        <li>Sandia <button class="boton">Eliminar</button></li>
+    </ul>
+
+    <h1>Ejercicio 8</h1>
+    <form id="formulario">
+        <input type="text" placeholder="Nombre" id="nombre" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <input type="text" id="ciudad" placeholder="Ciudad" required>
+        <button type="submit" id="botonAgregar">Enviar</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-cuerpo">
+            </tbody>
+        </table>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
